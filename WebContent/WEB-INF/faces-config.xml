@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+	
+	<managed-bean>
+		<managed-bean-name>modbusBean</managed-bean-name>
+		<managed-bean-class>com.kbremote.main.page.bean.ModbusBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<navigation-rule>
+		<from-view-id>/pages/config.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>/user/index</from-outcome>
+			<to-view-id>/pages/common/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/remote.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>/user/index</from-outcome>
+			<to-view-id>/pages/common/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/remote.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>/camera</from-outcome>
+			<to-view-id>/pages/camera.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/camera.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>/remote</from-outcome>
+			<to-view-id>/pages/remote.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/remote.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>/admin/config</from-outcome>
+			<to-view-id>/pages/config.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/common/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>remote</from-outcome>
+			<to-view-id>/pages/remote.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/common/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>angles</from-outcome>
+			<to-view-id>/pages/angles.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/config.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>remote</from-outcome>
+			<to-view-id>/pages/remote.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

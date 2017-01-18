@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="formMainMenu" styleClass="commonForm">
+		<header>
+			<table class="header">
+				<tr>
+					<td>
+						<a href="#{request.contextPath}/user/index">
+							<img src="#{request.contextPath}/resources/images/logo.png" />
+						</a>
+					</td>
+					<td>
+						<a href="#{request.contextPath}/logout" style="display:#{request.userPrincipal != null ? '' : 'none'}" >
+							<img src="#{request.contextPath}/resources/images/exit.png" />
+						</a>
+					</td>
+				</tr>
+			</table>
+		</header>
+	</h:form>
+</ui:composition>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title><ui:insert name="title"></ui:insert></title>
+	
+		<link rel="shortcut icon" type="image/x-icon"
+			href="#{request.contextPath}/resources/images/favicon.ico" />
+		<h:outputStylesheet name="kbremote.css" library="css" />
+		<h:outputStylesheet name="theme.css" library="css" />
+	
+		<f:facet name="first">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+			<meta http-equiv="Cache-Control" content="no-cache" />
+			<meta http-equiv="Pragma" content="no-cache" />
+		</f:facet>
+	</h:head>
+	
+	<h:body style="margin:0px 15px 0px -5px;">
+	
+		<div id="header" class="ui-fluid">
+			<ui:insert name="header">
+				<ui:include src="/pages/template/commonHeader.xhtml" />
+			</ui:insert>
+		</div>
+	
+		<div id="content" class="ui-fluid">
+			<ui:insert name="content">
+			</ui:insert>
+		</div>
+	
+		<!-- 
+			<div id="footer" class="ui-fluid">
+			  	<ui:insert name="footer">
+					<ui:include src="/pages/template/commonFooter.xhtml"/>
+			  	</ui:insert>
+			</div>
+		 -->
+	</h:body>
+
+</html>

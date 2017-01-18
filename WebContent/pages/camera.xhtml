@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/pages/template/template.xhtml">
+	<ui:define name="title">
+		<h:outputText value="KA-MA | ÜRETİM"></h:outputText>
+	</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<div class="menu-buttons">
+				<a href="#{request.contextPath}/user/remote">
+					<p:button value="GERİ DÖN" />
+				</a>
+			</div>
+			<div style="clear: both;"></div>
+
+			<!-- 
+			<script type="text/javascript">
+				var counter = 0;
+				var src = 'http://192.168.2.176/a.php';
+				setInterval(change, 400);
+				function change() {
+					src = src + '?v=' + counter;
+					$('#camPic').attr('src',src);
+					counter++;
+					src = 'http://192.168.2.176/a.php';
+				}
+			</script>
+			 -->
+			
+			<!-- iframe src="http://192.168.1.101:9090/stream" style="max-width: 800;max-height: 600;min-width: 160;min-height: 120;"></iframe> -->
+			<img src="http://#{cameraBean.clientIP}:9090/stream/video.mjpeg" style="user-select: none; cursor: zoom-in;" />
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

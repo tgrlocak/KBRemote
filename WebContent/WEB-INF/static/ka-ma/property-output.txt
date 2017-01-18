@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Properties xmlns:ns2="Properties">
+    <Property>
+        <code>UPDATE_FLAG</code>
+        <value>true</value>
+    </Property>
+    <Property>
+        <code>CLIENT_IP</code>
+        <value>192.168.1.103</value>
+    </Property>
+</ns2:Properties>

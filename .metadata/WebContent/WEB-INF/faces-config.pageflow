@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14763799821141" configfile="/KBRemote/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/config.xhtml" x="122" y="178" id="pf14768942304390" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf14768942304391 pf14770914326844" inlinks="pf14770914326845" path="/pages/config.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/common/index.xhtml" x="554" y="279" id="pf14768942304392" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf14770914326846 pf14846946016100" inlinks="pf14768942304391 pf14770914326847" path="/pages/common/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/remote.xhtml" x="338" y="381" id="pf14770914326848" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf14770914326847 pf14770914326845 pf14840737756270" inlinks="pf14770914326846 pf14770914326844 pf14840737756271" path="/pages/remote.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/camera.xhtml" x="122" y="562" id="pf14840737756272" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14840737756271" inlinks="pf14840737756270" path="/pages/camera.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/angles.xhtml" id="pf14846946016101" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf14846946016100" path="/pages/angles.xhtml"/>
+  <links id="pf14768942304391" target="pf14768942304392" source="pf14768942304390" outcome="/user/index">
+    <bendPoints d1Width="-158" d1Height="206" d2Width="178" d2Height="230"/>
+  </links>
+  <links id="pf14770914326847" target="pf14768942304392" source="pf14770914326848" outcome="/user/index"/>
+  <links id="pf14770914326845" target="pf14768942304390" source="pf14770914326848" outcome="/admin/config"/>
+  <links id="pf14770914326846" target="pf14770914326848" source="pf14768942304392" outcome="remote"/>
+  <links id="pf14770914326844" target="pf14770914326848" source="pf14768942304390" outcome="remote"/>
+  <links id="pf14840737756270" target="pf14840737756272" source="pf14770914326848" outcome="/camera"/>
+  <links id="pf14840737756271" target="pf14770914326848" source="pf14840737756272" outcome="/remote"/>
+  <links id="pf14846946016100" target="pf14846946016101" source="pf14768942304392" outcome="angles"/>
+</pageflow:Pageflow>

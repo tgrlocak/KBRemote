@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Users xmlns:ns2="Users" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <User>
+        <username>user1</username>
+        <password>user1</password>
+        <Role>
+			<name>ROLE_USER</name>
+		</Role>
+    </User>
+    <User>
+        <username>user2</username>
+        <password>user2</password>
+        <Role>
+			<name>ROLE_ADMIN</name>
+		</Role>
+		<Role>
+			<name>ROLE_USER</name>
+		</Role>
+    </User>
+	<User>
+        <username>admin</username>
+        <password>admin</password>
+        <Role>
+			<name>ROLE_ADMIN</name>
+		</Role>
+		<Role>
+			<name>ROLE_USER</name>
+		</Role>
+    </User>
+</ns2:Users>

@@ -1,0 +1,128 @@
+body {
+	/*font-family: roboto_condensedlight, sans-serif !important;*/
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+	/*background: url("../resources/images/bg.jpg") no-repeat;*/
+}
+
+#ton { /* Tabanca açýlarý */
+	background: green;
+	color: #FFF;
+	font-family: tahoma;
+	font-size: 8px;
+	font-weight: bold;
+	text-align: center;
+	padding: 2px;
+	border: 1px solid #000;
+	border-radius: 1px;
+}
+
+.tsistem { /* Tabanca sistem baþlýklarý */
+	background: red;
+	color: #FFF;
+	font-family: tahoma;
+	font-size: 8px;
+	font-weight: bold;
+	text-align: center;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+.tsimge { /* Tabanca sistem altý simgeler */
+	background: white;
+	color: #000;
+	font-family: tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	padding: 6px;
+	border: 1px dotted #808080;
+	border-radius: 2px;
+}
+
+.ttab { /* Tabanca 1 2 3 4 */
+	background: white;
+	color: #000;
+	font-family: tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	border: 1px dotted #808080;
+	border-radius: 2px;
+}
+
+.ttab2 { /* Tabanca 1 2 3 4 yeni deðer giriþ */
+	background: white;
+	color: #000;
+	font-family: tahoma;
+	font-size: 7px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	border: 1px dotted #808080;
+	border-radius: 2px;
+}
+
+.ui-flipswitch.ui-flipswitch-active{
+	
+}
+
+.ui-flipswitch{
+	
+}
+
+.ui-tabs-header .ui-link {
+	padding: 10px 0px;
+	font-size: 9px !important;
+}
+
+.ui-select .ui-btn{
+	font-size: 12px !important;
+	padding: 5px 5px !important;
+}
+
+.ui-panel-m .kama{
+	border-width: 0px !important;
+	height: 0px !important;
+	padding: 0px !important;
+}
+
+.ui-panel-m p {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.kama{border: none !important;}
+.kama .ui-panel-content{padding: 0 !important;}
+
+/*
+.ui-button,button.ui-button.ui-state-default,.ui-button.ui-state-default{
+	border:1px solid #3297AB !important;
+	color:#fff;
+	background:#009BAF !important;
+}
+
+button.ui-button.ui-state-hover,.ui-button.ui-state-hover,button.ui-button.ui-state-focus,.ui-button.ui-state-focus{
+	border:1px solid #156090 !important;
+	background:#3297AB !important;
+	outline:0 none;
+}
+
+.ui-panelmenu .ui-panelmenu-header.ui-state-active,.ui-panelmenu .ui-panelmenu-header.ui-state-active a{
+	background:#3297AB !important;
+	color:#fff;
+	border-color:#156090 !important;
+}
+*/
+
+.ui-datatable thead{
+	display:none;
+}
+
+.menu-buttons{float: right;margin-bottom: 5px;}
+.menu-buttons a{text-decoration: none;}

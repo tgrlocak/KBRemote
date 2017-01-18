@@ -1,0 +1,134 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/pages/template/template.xhtml">
+	<ui:define name="title">
+		<h:outputText value="KA-MA | UZAKTAN KONTROL"></h:outputText>
+	</ui:define>
+	<ui:define name="content">
+		
+		<h:form>
+			<div class="menu-buttons">
+				<a href="#{request.contextPath}/user/index">
+					<p:button value="GERİ DÖN" />
+				</a>
+				<a href="#{request.contextPath}/user/camera">
+					<p:button value="ÜRETİM HATTI" />
+				</a>
+				<a href="#{request.contextPath}/admin/config">
+					<p:button value="SERVİS AYARLARI" />
+				</a>
+			</div>
+			
+			<div style="clear: both;"></div>
+
+			<p:panelGrid columns="3" layout="grid">
+				<p:outputLabel for="konveyorHizi" value="KONVEYÖR" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.konveyorOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.konveyorOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.konveyorOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchKonveyor}" ajax="false"
+					process="konveyorHizi" />
+				<p:inputText id="konveyorHizi" value="#{remoteBean.konveyorHizi}" >
+					<f:convertNumber pattern="##.#"/>
+				</p:inputText>
+
+				<p:outputLabel for="salinimKoluHizi" value="SALINIM KOLU" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.salinimOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.salinimOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.salinimOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchSalinimKolu}" ajax="false"
+					process="salinimKoluHizi" />
+				<p:inputText id="salinimKoluHizi" value="#{remoteBean.salinimKoluHizi}" >
+					<f:convertNumber pattern="##.##"/>
+				</p:inputText>
+					
+				<p:outputLabel value="KAZIYICI" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.kaziyiciOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.kaziyiciOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.kaziyiciOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchKaziyici}" ajax="false"/>
+				<p:outputLabel />
+				
+				<p:outputLabel for="havalandirma" value="HAVALANDIRMA" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.havalandirmaOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.havalandirmaOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.havalandirmaOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchHavalandirma}" ajax="false"
+					process="havalandirma" />
+				<p:inputText id="havalandirma" value="#{remoteBean.havalandirmaDebi}" >
+					<f:convertNumber pattern="##.#"/>
+				</p:inputText>
+					
+				<p:outputLabel value="BOYAMA" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.boyamaOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.boyamaOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.boyamaOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchBoyama}" ajax="false"
+					process="boyama" />
+				<p:selectOneMenu id="boyama" value="#{remoteBean.boyamaCalisma}" style="font-size:12px;">
+					<f:selectItem itemLabel="STANDART ÇALIŞMA" itemValue="104"/>
+					<f:selectItem itemLabel="YOĞUN ÇALIŞMA" itemValue="111"/>
+				</p:selectOneMenu>
+				
+				<p:outputLabel value="POMPA BASINCI" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.pompaOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.pompaOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.pompaOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchPompa}" ajax="false"/>
+				<p:inputText value="#{remoteBean.pompaBasinci}" />
+				<p:outputLabel value="BAR" style="font-size:12px;margin:12px 5px;" rendered="false"/>
+					
+				<p:outputLabel value="TOZ ALMA FIRÇASI" style="font-size:12px;margin:12px 5px;"/>
+				<p:commandButton
+					style="background-color:#{remoteBean.tozAlmaOpen ? 'green' : 'red'};color:white;font-size:13px;
+						border-color:#{remoteBean.tozAlmaOpen ? 'darkgreen' : 'darkred'};"
+					value="#{remoteBean.tozAlmaOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+					action="#{remoteBean.switchTozAlma}" ajax="false"/>
+				<p:outputLabel />
+					
+				<p:outputLabel value="KOL TABANCASI SEÇİMİ" style="font-size:12px;margin:12px 5px;"/>
+				<p:panel styleClass="kama">
+					<p:commandButton id="aButton" 
+						style="background-color:#{remoteBean.kolTabancaAOpen ? 'green' : 'red'};color:white;font-size:13px;display:#{remoteBean.kolTabanca == 'A' ? '' : 'none'};
+							border-color:#{remoteBean.kolTabancaAOpen ? 'darkgreen' : 'darkred'};"
+						value="#{remoteBean.kolTabancaAOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+						action="#{remoteBean.switchKolTabanca}" ajax="false"/>
+					
+					<p:commandButton id="bButton" 
+						style="background-color:#{remoteBean.kolTabancaBOpen ? 'green' : 'red'};color:white;font-size:13px;display:#{remoteBean.kolTabanca == 'B' ? '' : 'none'};
+							border-color:#{remoteBean.kolTabancaBOpen ? 'darkgreen' : 'darkred'};"
+						value="#{remoteBean.kolTabancaBOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+						action="#{remoteBean.switchKolTabanca}" ajax="false"/>
+						
+					<p:commandButton id="cButton" 
+						style="background-color:#{remoteBean.kolTabancaCOpen ? 'green' : 'red'};color:white;font-size:13px;display:#{remoteBean.kolTabanca == 'C' ? '' : 'none'};
+							border-color:#{remoteBean.kolTabancaCOpen ? 'darkgreen' : 'darkred'};"
+						value="#{remoteBean.kolTabancaCOpen ? 'DURDUR' : 'ÇALIŞTIR'}"
+						action="#{remoteBean.switchKolTabanca}" ajax="false"/>
+				</p:panel>
+				<p:selectOneMenu id="kolTabanca" value="#{remoteBean.kolTabanca}" style="font-size:12px;">
+					<p:ajax process="kolTabanca" update="aButton bButton cButton"/>
+					<f:selectItem itemLabel="Seçiniz" itemValue=""/>
+					<f:selectItem itemLabel="A" itemValue="A"/>
+					<f:selectItem itemLabel="B" itemValue="B"/>
+					<f:selectItem itemLabel="C" itemValue="C"/>
+				</p:selectOneMenu>
+			</p:panelGrid>
+
+			<p:commandButton process="writeTable" value="KAYDET" rendered="false"
+				actionListener="#{remoteBean.writeValues}"
+				ajax="false" />
+		</h:form>
+	</ui:define>
+</ui:composition>

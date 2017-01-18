@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/pages/template/template.xhtml">
+	<ui:define name="title">
+		<h:outputText value="KA-MA | MAKİNE BİLGİLERİ"></h:outputText>
+	</ui:define>
+	<ui:define name="content">
+	
+		<f:event listener="#{indexBean.onLoad}" type="preRenderView" />
+		<h:form>
+			
+			<div class="menu-buttons">
+				<a href="#{request.contextPath}/user/angles">
+					<p:button value="TABANCA AÇILARI" />
+				</a>
+				<a href="#{request.contextPath}/user/remote">
+					<p:button value="UZAKTAN KONTROL" />
+				</a>
+			</div>
+
+			<div style="clear: both;"></div>
+
+			<p:dataTable value="#{indexBean.readObjList}" var="obj" >
+				<p:column style="width:66%;height:25px;">
+					<h:outputText value="#{obj.componentName}" />
+				</p:column>
+				<p:column style="width:33%;height:25px;text-align:center;">
+
+					<h:outputText value="#{obj.value}" rendered="#{obj.address.type == 'D'}"/>
+					
+					<p:button style="background-color:#{obj.value == 'T' ? 'green' : 'red'} !important;color:white;
+						border-color:#{obj.value == 'T' ? 'darkgreen' : 'darkred'} !important;" 
+						disabled="true"
+						value="#{obj.value == 'T' ? 'AÇIK' : 'KAPALI'}"
+						rendered="#{obj.address.type == 'M'}" />
+
+				</p:column>
+			</p:dataTable>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
