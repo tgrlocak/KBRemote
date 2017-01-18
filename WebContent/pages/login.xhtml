@@ -12,21 +12,22 @@
 	<ui:define name="content">
 		<p:messages id="message" showDetail="true" closable="true"/>
 
-		<h:form id="loginForm" prependId="false">
-			<p:panelGrid columns="2" columnClasses="ui-grid-col-2" styleClass="ui-panelgrid-blank">
-				<p:outputLabel value="Kullanıcı Adı:" for="j_username"/>
-				<p:inputText id="j_username" required="true"/>
-	
-				<p:outputLabel value="Şifre:" for="j_password"/>
-				<p:password id="j_password" required="true"/>
-	
-				<p:outputLabel value="Beni Hatırla" for="_spring_security_remember_me"/>
-				<p:selectBooleanCheckbox id="_spring_security_remember_me" />
-	
-				<f:facet name="footer">
+		<div class="ui-fluid">
+			<h:form id="loginForm" prependId="false">
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank" columnClasses="ui-grid-col-2,ui-grid-col-10">
+					<p:outputLabel value="Kullanıcı Adı:" for="j_username"/>
+					<p:inputText id="j_username" required="true"/>
+		
+					<p:outputLabel value="Şifre:" for="j_password"/>
+					<p:password id="j_password" required="true"/>
+		
+					<p:outputLabel value="Beni Hatırla" for="_spring_security_remember_me"/>
+					<p:selectBooleanCheckbox id="_spring_security_remember_me" />
+		
+					<p:outputLabel value="" for="login"/>
 					<p:commandButton type="submit" id="login" action="#{loginBean.doLogin}" value="Giriş" ajax="false"/>
-				</f:facet>
-			</p:panelGrid>
-		</h:form>
+				</p:panelGrid>
+			</h:form>
+		</div>
 	</ui:define>
 </ui:composition>

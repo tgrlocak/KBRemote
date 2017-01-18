@@ -19,36 +19,22 @@
 			
 			<div style="clear: both;"></div>
 
-			<p:tabView activeIndex="#{configBean.activeTab}">
-				<p:tab title="REÇETE SEÇİMİ">
 					
-				</p:tab>
-				<p:tab title="TABANCA AÇILARI BELİRLE">
-					
-				</p:tab>
-				<p:tab title="ÇALIŞMA GÖLGE AYARLARI SEÇİMİ">
-					
-					
-				</p:tab>
-				<p:tab title="SERVİS AYARLARI">
-					
-					<p:dataTable value="#{configBean.writeObjectList}" var="obj"
-						type="ordered" id="writeTable">
-						<p:column>
-							<p:outputLabel value="#{obj.componentName}" style="font-size:12px;"/>
-						</p:column>
-						<p:column>
-							<p:inputText value="#{obj.value}" style="width:40px;"
-								rendered="#{obj.type == 'word'}" />
-							<p:selectBooleanCheckbox value="#{obj.value}"
-								rendered="#{obj.type == 'bool'}" />
-						</p:column>
-						<p:column>
-							<p:outputLabel value="#{obj.unit}" style="font-size:12px;"/>
-						</p:column>
-					</p:dataTable>
-				</p:tab>
-			</p:tabView>
+			<p:dataTable value="#{configBean.writeObjectList}" var="obj"
+				type="ordered" id="writeTable">
+				<p:column>
+					<p:outputLabel value="#{obj.componentName}" style="font-size:12px;"/>
+				</p:column>
+				<p:column>
+					<p:inputText value="#{obj.value}" style="width:40px;"
+						rendered="#{obj.type == 'word'}" />
+					<p:selectBooleanCheckbox value="#{obj.value}"
+						rendered="#{obj.type == 'bool'}" />
+				</p:column>
+				<p:column>
+					<p:outputLabel value="#{obj.unit}" style="font-size:12px;"/>
+				</p:column>
+			</p:dataTable>
 
 			<p:commandButton process="writeTable" value="KAYDET"
 				actionListener="#{configBean.writeValues}"

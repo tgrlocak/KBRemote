@@ -39,16 +39,22 @@ public class IndexController {
 		return "camera";
 	}
 
-	@RequestMapping(value = { "/user", "/user/angles" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/user", "/user/index" }, method = RequestMethod.GET)
 	public String getAnglesPage(ModelMap model) {
+
+		return "common/index";
+	}
+	
+	@RequestMapping(value = "/user/angles", method = RequestMethod.GET)
+	public String getUserIndex(ModelMap model) {
 
 		return "angles";
 	}
 	
-	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
-	public String getUserIndex(ModelMap model) {
+	@RequestMapping(value = "/user/receipt", method = RequestMethod.GET)
+	public String getReceipts(ModelMap model) {
 
-		return "common/index";
+		return "receipt";
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
