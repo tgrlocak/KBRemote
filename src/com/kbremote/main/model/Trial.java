@@ -93,13 +93,13 @@ public class Trial {
 		
 		//testModbusClient();
 
-		//testReadAddresses();
+		testReadAddresses();
 		
 		//testWriteValues();
 		
-		testAddressService();
+		//testAddressService();
 		
-		testAddressUtils();
+		//testAddressUtils();
 		
 		//testProperties();
 
@@ -113,7 +113,7 @@ public class Trial {
 		
 		try {
 			System.out.println("READ START");
-			ModbusClient client = new ModbusClient("127.0.0.1", 502);
+			ModbusClient client = new ModbusClient(AddressUtils.getClientIP(), 502);
 			client.Connect();
 			
 			for(Address add : addresList) {
@@ -139,7 +139,7 @@ public class Trial {
 		
 		try {
 			System.out.println("WRITE START");
-			ModbusClient client = new ModbusClient("127.0.0.1", 502);
+			ModbusClient client = new ModbusClient(AddressUtils.getClientIP(), 502);
 			client.Connect();
 			
 			for(Address add : addresList){

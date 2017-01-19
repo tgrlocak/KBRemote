@@ -51,7 +51,8 @@
 	<!-- PF Theme -->
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
-		<param-value>afternoon</param-value>
+		<!--param-value>afternoon</param-value-->
+		<param-value>bootstrap</param-value>
 	</context-param>
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>

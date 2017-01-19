@@ -15,7 +15,7 @@ import com.kbremote.main.model.Property;
 public class PropertyUtils {
 
 	/*
-	 * Raspbian : /home/pi
+	 * Raspbian : /usr/share/tomcat7/
 	 * Windows  : C:/Users/{user.name}
 	 */
 	public static String addressFile = System.getProperty("user.home") + "/ka-ma/address.xml";
@@ -63,7 +63,7 @@ public class PropertyUtils {
 			}
 			
 			System.out.println("CLIENT IP : " + CLIENT_IP);
-			System.out.println("CLIENT IP : " + LOCAL_IP);
+			System.out.println("LOCAL IP : " + LOCAL_IP);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
