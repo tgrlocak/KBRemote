@@ -18,6 +18,59 @@
 			</div>
 			<div style="clear: both;"></div>
 
+			<p:dataTable var="obj" value="#{angleBean.angles}" styleClass="angleTable">
+				<p:columnGroup type="header">
+		            <p:row>
+		            	<p:column rowspan="2" headerText=""/>
+		            	<p:column colspan="3" headerText="Sistem A" styleClass="angleBG"/>
+		                <p:column colspan="3" headerText="Sistem B" styleClass="angleBG"/>
+		                <p:column colspan="3" headerText="Sistem C" styleClass="angleBG"/>
+		            </p:row>
+		            <p:row>
+		                <p:column headerText="h"/>
+		                <p:column headerText="β" />
+		                <p:column headerText="α" />
+		                <p:column headerText="h" />
+		                <p:column headerText="β" />
+		                <p:column headerText="α" />
+		                <p:column headerText="h" />
+		                <p:column headerText="β" />
+		                <p:column headerText="α" />
+		            </p:row>
+		        </p:columnGroup>
+		        
+		        <p:column>
+		        	<h:outputText value="${obj.tabanca}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemAh}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemAbeta}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemAalfa}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemBh}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemBbeta}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemBalfa}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemCh}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemCbeta}"/>
+		        </p:column>
+		        <p:column>
+		        	<h:outputText value="${obj.sistemCalfa}"/>
+		        </p:column>
+			</p:dataTable>
+
 		</h:form>
 
 	</ui:define>

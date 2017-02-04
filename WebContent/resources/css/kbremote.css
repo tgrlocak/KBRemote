@@ -6,7 +6,7 @@ body {
 	/*background: url("../resources/images/bg.jpg") no-repeat;*/
 }
 
-#ton { /* Tabanca açýlarý */
+#ton { /* Tabanca aÃ§Ã½larÃ½ */
 	background: green;
 	color: #FFF;
 	font-family: tahoma;
@@ -18,7 +18,7 @@ body {
 	border-radius: 1px;
 }
 
-.tsistem { /* Tabanca sistem baþlýklarý */
+.tsistem { /* Tabanca sistem baÃ¾lÃ½klarÃ½ */
 	background: red;
 	color: #FFF;
 	font-family: tahoma;
@@ -29,7 +29,7 @@ body {
 	border-radius: 5px;
 }
 
-.tsimge { /* Tabanca sistem altý simgeler */
+.tsimge { /* Tabanca sistem altÃ½ simgeler */
 	background: white;
 	color: #000;
 	font-family: tahoma;
@@ -53,7 +53,7 @@ body {
 	border-radius: 2px;
 }
 
-.ttab2 { /* Tabanca 1 2 3 4 yeni deðer giriþ */
+.ttab2 { /* Tabanca 1 2 3 4 yeni deÃ°er giriÃ¾ */
 	background: white;
 	color: #000;
 	font-family: tahoma;
@@ -122,6 +122,33 @@ button.ui-button.ui-state-hover,.ui-button.ui-state-hover,button.ui-button.ui-st
 
 .ui-datatable thead{
 	display:none;
+}
+
+.angleTable{
+	
+}
+
+.angleTable .ui-datatable-tablewrapper {
+	overflow:hidden;
+}
+
+.angleTable thead{
+	display: table-header-group !important;
+}
+
+.angleTable th.ui-state-default{
+	background: none !important;
+	border: none !important;
+	border-color: none !important;
+}
+
+.angleTable thead tr th{
+	border: none !important;
+}
+
+.angleBG, .angleTable th.angleBG{
+	background-color:#3297AB !important;
+	color:white !important;
 }
 
 .menu-buttons{float: right;margin-bottom: 5px;}
