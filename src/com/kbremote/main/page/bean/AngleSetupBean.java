@@ -15,7 +15,7 @@ import com.kbremote.main.util.AddressUtils;
 
 @ManagedBean
 @ViewScoped
-public class AngleBean extends ModbusBean{
+public class AngleSetupBean extends ModbusBean{
 
 	private List<Angle> angles;
 

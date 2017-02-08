@@ -146,6 +146,12 @@ button.ui-button.ui-state-hover,.ui-button.ui-state-hover,button.ui-button.ui-st
 	border: none !important;
 }
 
+.angleTable tbody td{
+	text-align: center !important;
+}
+
+.ui-state-default{text-shadow: none;}
+
 .angleBG, .angleTable th.angleBG{
 	background-color:#3297AB !important;
 	color:white !important;
